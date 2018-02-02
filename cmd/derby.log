@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Sat Jan 27 17:34:28 JST 2018:
+DerbyバージョンThe Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): インスタンスa816c00e-0161-36c0-ebb9-00000747c3f0を
+file:/C:/Users/oyaji/Documents/apps/db-derby-10.14.1.0-bin/lib/derby.jarからロードされたクラス・ローダーjdk.internal.loader.ClassLoaders$AppClassLoader@4aa8f0b4により
+データベース・ディレクトリC:\Users\oyaji\Documents\mydata\db\derby\DerbyTestDB上でブートしています
+java.vendor=Oracle Corporation
+java.runtime.version=9.0.4+11
+user.dir=C:\Users\oyaji\Documents\tools\cmd
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+データベース・クラス・ローダーが開始されました - derby.database.classpath=''
+----------------------------------------------------------------
+Sat Jan 27 17:36:27 JST 2018: Derbyエンジンを停止しています
+----------------------------------------------------------------
+Sat Jan 27 17:36:28 JST 2018:
+クラス・ローダーjdk.internal.loader.ClassLoaders$AppClassLoader@4aa8f0b4を持つデータベース・ディレクトリC:\Users\oyaji\Documents\mydata\db\derby\DerbyTestDBのインスタンスa816c00e-0161-36c0-ebb9-00000747c3f0を停止しています
+----------------------------------------------------------------
