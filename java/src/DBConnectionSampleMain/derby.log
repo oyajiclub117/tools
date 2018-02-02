@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Jan 27 17:44:15 JST 2018:
+DerbyバージョンThe Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): インスタンスa816c00e-0161-36c9-dee3-0000076069a8を
+file:/C:/Users/oyaji/Documents/apps/db-derby-10.14.1.0-bin/lib/derby.jarからロードされたクラス・ローダーjdk.internal.loader.ClassLoaders$AppClassLoader@4aa8f0b4により
+データベース・ディレクトリC:\Users\oyaji\Documents\mydata\db\derby\DerbyTestDB上でブートしています
+java.vendor=Oracle Corporation
+java.runtime.version=9.0.4+11
+user.dir=C:\Users\oyaji\Documents\workspace\svn\java\src\DBConnectionSampleMain
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+データベース・クラス・ローダーが開始されました - derby.database.classpath=''
