@@ -1,0 +1,45 @@
+<job id="xls-upd-sheets">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+'//**********************************************************
+'//* @procedure proc_worksheet
+'//**********************************************************
+Private Sub proc_worksheet( _
+	byref p_objWks _
+	)
+	'-- var Object
+	Dim objCell
+	
+	'-- var Long
+	
+	'-- var String
+	Dim strCsvData
+	
+	g_lngIdData = g_lngIdData + 1
+	
+	strCsvData = ""
+	For Each objCell In p_objWks.UsedRange
+		With objCell
+		If .Value <> "" Then
+			strCsvData = _
+				g_lngIdData & "," & _
+				"""" & p_objWks.Application.ActiveWorkbook.name & """" & "," & _
+				"""" & p_objWks.name & """" & "," & _
+				.Row & "," & _
+				.Column & "," & _
+				"""" & .Value & """"
+			createCsvFile_Data strCsvData
+
+			g_lngIdData = g_lngIdData + 1
+		End If
+		End With
+	Next
+'//	msgbox strCsvData
+		
+
+End Sub
+
+	main "bus_batch_processes.csv", false
+	</Script>
+</job>

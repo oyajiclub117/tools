@@ -1,0 +1,9 @@
+<package>
+<job id="job01">
+<script language="vbscript" src="./lib_adodb.vbs"></script>
+<script language="vbscript" src="./dbtest.vbs"></script>
+<script language="vbscript">
+Call Main
+</script>
+</job>
+</package>

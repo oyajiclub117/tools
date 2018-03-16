@@ -1,0 +1,17 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_NAME_TARGET = "ÉhÉÅÉCÉìíËã`èë"
+Dim SHEET_START_ROW
+Dim SHEET_START_COL
+Dim START_ROW_DATA
+Dim CELL_ID_COL
+Dim CSV_ADD_COLS
+Dim COL_START_TARTGET
+Const HEADER_COLS = "id,domain_id,code_type,category_1,category2_1,category2_2,category2_3,category2_4,category2_5,category2_6,domain_name,domain_name_p,domain_name_l,data_type_l,data_size_l,data_type_p,data_size_p,description,data_format,data_min,data_max,data_default"
+Const DUP_COL_ENABLE = false
+
+	main "bus_domain_lists.csv"
+	</Script>
+</job>

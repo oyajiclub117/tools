@@ -1,0 +1,13 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_START_ROW = "6"
+Const SHEET_START_COL = "A"
+Const CELL_ID_COL = "A"
+Const CSV_ADD_COLS = "K2,K3"
+Const HEADER_COLS = "id,func_group_id,func_group_name,list_id,bus_group_id,bus_group_name,bus_id,bus_name,description,actor"
+
+	main "bus_lists.csv"
+	</Script>
+</job>

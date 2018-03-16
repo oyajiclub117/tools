@@ -1,0 +1,17 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_NAME_TARGET = "DBƒZƒbƒg"
+Dim SHEET_START_ROW
+Dim SHEET_START_COL
+Dim START_ROW_DATA
+Dim CELL_ID_COL
+Dim CSV_ADD_COLS
+Dim COL_START_TARTGET
+Const HEADER_COLS = "id,func_group_id,func_group_name,bus_id,bus_name,func_id,func_name,bat_id,bat_name,dbset_id,dbset_name,table_name,enable_new,enable_update,l_column_name,primary_key,set_content,comment"
+Const DUP_COL_ENABLE = false
+
+	main "bus_dbset_lists.csv", false
+	</Script>
+</job>

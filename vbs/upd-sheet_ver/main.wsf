@@ -1,0 +1,7 @@
+<job id="xls-upd-sheets">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+	main "log_update_sheet_ver.csv"
+	</Script>
+</job>

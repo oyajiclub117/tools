@@ -1,0 +1,7 @@
+<job id="cre-sheetnames-xls">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+	main "sheetnames.csv"
+	</Script>
+</job>

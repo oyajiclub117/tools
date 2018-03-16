@@ -1,0 +1,15 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_START_ROW = "5"
+Const SHEET_START_COL = "A"
+Const START_ROW_DATA = 7
+Const CELL_ID_COL = "B"
+Const CSV_ADD_COLS = "L2,L3"
+Const HEADER_COLS = "id,func_group_id,func_group_name,list_id,bus_id,bus_name,func_id,func_name,screen_id,screen_name,actor,description,comment"
+Const DUP_COL_ENABLE = true
+
+	main "bus_screen_lists.csv"
+	</Script>
+</job>

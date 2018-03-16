@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<charset="shift_jis">
+<script language="vbscript" src="./lib_adodb.vbs"></script>
+<script language="vbscript" src="./lib_dhtml.vbs"></script>
+<script language="vbscript" src="./dbtest.vbs"></script>
+</head>
+<body>
+<textarea name="f_txa_sql_command" rows="5" cols="80">
+select top 10 * from sample.csv;
+</textarea><br/>
+<button onclick="cmdExecSqlCommand_Click">dbtest</button><br/>
+<div id="id_view_result"></div>
+</body>
+</html>

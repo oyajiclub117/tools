@@ -1,0 +1,10 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+	Dim strTmpl
+	
+	strTmpl = "C:\Users\winridge\Documents\workspace\svn-work\ドキュメント\再開発\phase_201411\110_お客様レビュー成果物\リスト・オーダー共通\12_エンティティ定義書\v3.1\エンティティ定義書_リスト・オーダー共通.xlsx"
+	main "bus_entity_lists.csv", strTmpl
+	</Script>
+</job>

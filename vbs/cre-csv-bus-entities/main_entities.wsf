@@ -1,0 +1,15 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_START_ROW = "8"
+Const SHEET_START_COL = "B"
+Const START_ROW_DATA = 1
+Const CELL_ID_COL = "B"
+Const CSV_ADD_COLS = "K5,K6"
+Const HEADER_COLS = "id,entity_name,entity_id,column_id,l_column_name,p_column_name,data_type,data_size,data_mode,not_null,unique_key,primary_key,data_default,description"
+Const DUP_COL_ENABLE = false
+Const SHEET_NAME_TARGET = ""
+	main "bus_mst_ent_columns.csv"
+	</Script>
+</job>

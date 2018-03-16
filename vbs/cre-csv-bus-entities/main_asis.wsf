@@ -1,0 +1,142 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_START_ROW = "8"
+Const SHEET_START_COL = "B"
+Const START_ROW_DATA = 1
+Const CELL_ID_COL = "B"
+Const CSV_ADD_COLS = "K3,K5,K6"
+Const HEADER_COLS = "id,subsys_name,table_name_l,table_name_p,column_id,column_name_l,column_name_p,data_type,length,precision,null,unique_key,primary_key,default,description"
+Const DUP_COL_ENABLE = false
+'//Const SHEET_NAME_TARGET = "DM表マスタ"
+Const SHEET_NAME_TARGET = ""
+
+'//**********************************************************
+'//* @procedure proc_workbook
+'//**********************************************************
+Private Sub proc_workbook( _
+	byref p_objWkb _
+	)
+	'-- var Object
+	Dim objWks
+	
+	For Each objWks In p_objWkb.Worksheets
+		If objWks.Name = "表紙" _
+		Or objWks.Name = "テーブル仕様書" _
+		Then
+			'// nothin
+		ElseIf SHEET_NAME_TARGET = "" _
+		Or objWks.Name = SHEET_NAME_TARGET Then
+			g_objExcel.Application.StatusBar = "start sheet name=" & objWks.Name 
+			proc_worksheet objWks
+			g_objExcel.Application.StatusBar = "ended sheet name=" & objWks.Name 
+		End If
+	Next
+End Sub
+
+'//**********************************************************
+'//* @procedure proc_worksheet
+'//**********************************************************
+Private Sub proc_worksheet( _
+	byref p_objWks _
+	)
+Const COLUMN_MODIFY_DESC = "AV"
+	'-- var Object
+	Dim objFieldColCells
+	Dim objArrs
+	Dim objCsvAddCols
+	Dim x
+	
+	'-- var Long
+	Dim lngLastRow
+	Dim lngLastCol
+	Dim i
+	Dim j
+	Dim lngArrNum
+	
+	'-- var String
+	Dim strCsvData
+	Dim strText
+	Dim strDelimString
+	Dim strColCells
+	Dim strValues()
+	Dim strCellData
+	
+	With p_objWks
+	lngLastRow = .Range(SHEET_START_COL & SHEET_START_ROW + START_ROW_DATA).End(xlDown).Row
+	lngLastCol = .Range(CELL_COL_MAX & SHEET_START_ROW).End(xlToLeft).Column
+	
+	strColCells = ""
+	
+	For i = 1 To lngLastCol
+		If .Cells(SHEET_START_ROW, i) <> "" Then
+			objArrs = Split(.Cells(SHEET_START_ROW, i).AddressLocal, "$")
+			strColCells = strColCells & objArrs(1) & ","
+		End If
+		
+	Next
+
+	strColCells  = Left(strColCells, Len(strColCells) - 1)
+	End With
+	objFieldColCells = Split(strColCells, ",")
+	
+	objCsvAddCols = Split(CSV_ADD_COLS, ",")
+	
+	lngArrNum = UBound(objFieldColCells)
+	
+	ReDim strValues(lngArrNum)
+	
+	For i = SHEET_START_ROW + START_ROW_DATA to lngLastRow
+		g_lngIdData = g_lngIdData + 1
+
+		With p_objWks
+		'-- set csv id
+		strCsvData = _
+			g_lngIdData & ","
+		'-- set csv add cols
+		For Each x In objCsvAddCols
+			strCsvData = strCsvData & _
+				"""" & .Range(x) & ""","
+		Next
+		
+		For j = 0 to lngArrNum
+			strCellData = .Cells(i, objFieldColCells(j))
+			If strCellData = "" Then strCellData = strValues(j)
+			strCellData = Replace(strCellData, """", """""")
+			
+			If objFieldColCells(j) = CELL_ID_COL  Then
+				strText = strCellData
+			Else
+				strText = """" & strCellData & """"
+			End If
+			
+			strDelimString = ""
+			
+			If j < lngArrNum Then strDelimString = ","
+			
+			strCsvData = strCsvData & _
+				strText & strDelimString
+			
+			if .Cells(i, objFieldColCells(j)) <> "" _
+			And DUP_COL_ENABLE = true Then strValues(j) = .Cells(i, objFieldColCells(j))
+		Next
+
+'//		'// column modify description
+'//		strText = ""
+'//		If InStr(.Cells(i, COLUMN_MODIFY_DESC),"削除") Then
+'//			strText = """" & "D" & """"
+'//		End If
+'//
+'//		strCsvData = strCsvData & "," & _
+'//			"""" & .Cells(i, COLUMN_MODIFY_DESC) & """" & "," & _
+'//			strText
+		createCsvFile_Data strCsvData
+
+		End With
+	Next
+End Sub
+
+	main "bus_tab_columns_asis.csv"
+	</Script>
+</job>

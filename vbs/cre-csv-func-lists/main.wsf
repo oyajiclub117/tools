@@ -1,0 +1,17 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_NAME_TARGET = "‹@”\ˆê——"
+Dim SHEET_START_ROW
+Dim SHEET_START_COL
+Dim START_ROW_DATA
+Dim CELL_ID_COL
+Dim CSV_ADD_COLS
+Dim COL_START_TARTGET
+Const HEADER_COLS = "id,func_group_id,func_group_name,list_id,bus_id,bus_name,func_id,func_name,type_online,type_batch,task_cycle,description,enabled_detail"
+Const DUP_COL_ENABLE = false
+
+	main "bus_func_lists.csv"
+	</Script>
+</job>

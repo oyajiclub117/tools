@@ -1,0 +1,45 @@
+Sub test1()
+    Dim x As Shape
+                Dim y As Shape
+                Dim text As String
+    For Each x In ThisWorkbook.Worksheets(1).Shapes
+        If x.Type = msoGroup Then
+                For Each y In x.GroupItems
+                    text = y.TextFrame.Characters.text
+                    If InStr(text, "D81") > 0 Then
+                        'Debug.Print ("sheet : " + ActiveSheet.Name)
+                        Debug.Print ("text : " + text)
+                        y.Select
+                    End If
+                Next y
+        Else
+                'If InStr(x.DrawingObject.Characters.text, "D81") Then
+                    Debug.Print x.DrawingObject.Characters.text
+                    x.Select
+                'End If
+        End If
+    Next x
+End Sub
+
+Sub test1(ByVal keyword)
+Dim x As Shape
+Dim text As String
+
+    For Each x In ActiveSheet.Shapes
+        
+        If x.Type = msoTextBox Then
+            text = x.DrawingObject.Characters.text
+            If InStr(text, keyword) Then
+                Debug.Print x.Name & " - text=" & text
+                x.Select
+            End If
+            
+        End If
+        i = i + 1
+    Next x
+    Debug.Print ActiveSheet.Shapes.Count & "i=" & i
+End Sub
+
+Sub test2()
+    test1 ("D90")
+End Sub

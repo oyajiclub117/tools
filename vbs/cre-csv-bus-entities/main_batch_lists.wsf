@@ -1,0 +1,15 @@
+<job id="cre_batch_lists">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+Const SHEET_START_ROW = "5"
+Const SHEET_START_COL = "A"
+Const START_ROW_DATA = 1
+Const CELL_ID_COL = "A"
+Const CSV_ADD_COLS = "L2,L3"
+Const HEADER_COLS = "id,func_group_id,func_group_name,list_id,bus_id,bus_name,func_id,func_name,batch_id,batch_name,description,language_type,proc_type,ext_if,comment"
+Const DUP_COL_ENABLE = false
+Const SHEET_NAME_TARGET = "ƒoƒbƒ`ˆê——"
+	main "bus_batch_lists.csv"
+	</Script>
+</job>

@@ -1,0 +1,7 @@
+<job id="cre_bus_ids">
+	<script language="VBScript" src="profile.vbs"/>
+	<script language="VBScript" src="main.vbs"/>
+	<script language="VBScript">
+	main "bus_entity_lists.csv"
+	</Script>
+</job>
