@@ -1,0 +1,5 @@
+id, name,db_name,db_type,user,password
+1,"csv-share","udl",1,"",""
+2,"csv-share","csv",2,"",""
+3,"excel",3,"",""
+4,"firebird",4,"sysdba","down5kg"

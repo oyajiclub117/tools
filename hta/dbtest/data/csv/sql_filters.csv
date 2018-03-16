@@ -1,0 +1,13 @@
+id,title,expression
+1,"フレキシビリティ検討","and f22 in('入力のデータチェック','社・講座の追加/変更','社外帳票の出力')"
+2,"統計機能検討のInput","and f25 = '統計機能検討のInput'"
+3,"統計機能検討のInput","and f25 = '統計機能検討のInput'"
+4,"統計機能検討のInput","and f25 = '統計機能検討のInput'"
+5,"統計機能検討のInput","and f25 = '統計機能検討のInput'"
+6,"統計機能検討のInput","and f25 = '統計機能検討のInput'"
+7,"id is Numric","isNumeric([ドメイン定義書])"
+8,"id is Numric","isNumeric([メッセージ設計書])"
+9,"id is Numric","isNumeric([■変更要件一覧])"
+10,"id is Numric","isNumeric([f1])"
+11,"id is Numric","isNumeric([f1])"
+12,"id is Numric","isNumeric([f1])"

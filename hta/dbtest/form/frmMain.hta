@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Data Base Test Tool</title>
+<hta:application id="oHtaApp"/>
+<meta http-equiv="Content-Type" content="text/html;charset=shift_jis"/>
+<link type="text/css" href="../css/default.css" rel="stylesheet"></link>
+<script language="vbscript" src="../../lib/lib_adodb.vbs"></script>
+<script language="vbscript" src="../../lib/lib_window.vbs"></script>
+<script language="vbscript" src="../../lib/lib_dhtml.vbs"></script>
+<script language="vbscript" src="../../lib/lib_form.vbs"></script>
+<script language="vbscript" src="../../lib/lib_fso.vbs"></script>
+<script language="vbscript" src="../script/profile.vbs"></script>
+<script language="vbscript" src="../script/frmMain.vbs"></script>
+</head>
+<body>
+<span onclick="setDisplay id_view_main">-</span><br/>
+<div id="id_view_main">
+<div id="id_view_menu">
+	<select name="f_ddl_db_types" onclick="cmdSelectDbType_Click f_ddl_db_types">
+		<option value="-">-- db types --</option>
+		<option value="udl,id_ddl_udl_files">udl</option>
+		<option value="csv,id_ddl_csv_files">csv</option>
+		<option value="excel,id_ddl_excel_files">excel</option>
+		<option value="firebird,id_ddl_firebird_files">firebird</option>
+	</select>
+	<select name="f_ddl_udl_files" id="id_ddl_udl_files" onchange="viewSchema_Tables ''" style="display:none;">
+		<option value="-">-- udl files --</option>
+		<option value="csv.udl">csv share</option>
+		<option value="excel.udl">excel share</option>
+		<!--option value="excel_01.udl">excel test</option>
+		<option value="excel_02.udl">excel legacy features</option>
+		<option value="excel_03.udl">excel legacy speces</option-->
+	</select>
+	<select name="f_ddl_file_paths" id="id_ddl_csv_files" onchange="viewSchema_Tables ''" style="display:none;">
+		<option value="-">-- file-paths --</option>
+		<option value="csv">csv</option>
+		<option value="C:\Users\winridge\Documents\mydata\csv">csv-share</option>
+	</select>
+	<span onclick="" title="select schema">...</span>
+	<span id="id_ddl_excel_files" style="display:none;">
+	<span id="id_ddl_file_path_excel"></span>
+	<input type="text" name="f_txf_file_path_key" size="5" maxsize="40" title="accept file path keyword"></input>
+	<span id="id_cbx_fillter" style="display:none;"><input type="checkbox" onclick="cmdFilePathKey_Click f_txf_file_path_key" name="f_cbx_file_path_filter"">filter</input></span>
+	<!--input type="checkbox" name="f_cbx_row_head">row-head</input-->
+	<span onclick="setDisplay id_file_path_excel" title="view file path dialog">…</span>
+	<span id="id_file_path_excel" style="display:none;">
+	<input type="file" name="f_file_path_excel" id="id_file_path_excel_"></input>
+	</span>
+	<span id="id_ddl_excel_funcs"></span>
+	</span>
+	<span id="id_ddl_firebird_files" style="display:none;">
+	<select name="f_firebird_paths" onclick="viewSchema_Tables ''" style="display:inline;">
+		<option value="-">-- file paths --</option>
+		<option value="35,sysdba,down5kg">mydb</option>
+	</select>
+	<span onclick="setDisplay id_file_path_firebird" title="view file path dialog">[…]</span>
+	<input type="file" name="f_file_path_firebird" id="id_file_path_firebird" style="display:none;"></input>
+	<select name="f_ddl_func_firebird_lists" onchange="cmdActionEventExcel_Click">
+		<!--option value="sql-id,sheet-name,filter-sql-id">title-name</option-->
+		<option value="-">-- function lists --</option>
+		<option value="2,フレキシビリティ検討,1">フレキシビリティ検討</option>
+	</select>
+	</span>
+	<span id="id_ddl_tables"></span>
+	<button onclick="cmdAddNew_Click" style="display:inline;">new</button><!--br/-->
+	<button onclick="viewSchema_Tables ''" style="display:inline;">list-tables</button><br/>
+</div>
+<div id="id_view_action">
+	<button onclick="cmdExecSqlCommand_Click 'query'">sql-query</button>
+	<button onclick="cmdExecSqlCommand_Click 'execute'">sql-execute</button>
+	<table border="0">
+	<tr>
+	<!--// sql command info -->
+	<td valign="top">
+	<textarea name="f_txa_sql_command" rows="5" cols="80">select top 10 * from sample.csv;
+	</textarea>
+	</td>
+	<!--// search info -->
+	<td valign="top">
+	<input type="text" name="f_txt_keyword" size="20" title="type-in keyword"></input><br/>
+	<button onclick="cmdActionEventExcel_Click">key search</button><br/>
+	<!--br/-->
+	</td>
+	<!--// database info -->
+	<td  valign="top" style="width:"200px;">
+	<table border="0">
+	<tr>
+		<td>
+		<label>user-id</label>
+		</td>
+		<td>
+		<input type="text" name="f_txt_user" size="12"></input><br/>
+		</td>
+		<td>
+	</tr>
+	<tr>
+		<td>
+		<label>password</label>
+		</td>
+		<td>
+		<input type="password" name="f_txt_password" size="12"></input><br/>
+		</td>
+	</tr>
+	</table>
+	</td>
+	<!--// schema info -->
+	<td valign="top">
+	<span id="id_schema_options" title="スキーマオプションを設定する。">
+	<input type="checkbox" onclick="" name="f_cbx_row_header" title="Enable Row Header">row header</button>
+	</span>
+	</td>
+	<td valign="top">
+	<button onclick="cmdActionToDo_Click">ToDo</button><br/>
+	<button onclick="cmdGetSchemaInfo_Click">get-schemainfo</button><br/>
+	</td>
+	</tr>
+	</table>
+<!-- id_view_action end -->
+</div>
+<!-- id_view_main end -->
+</div>
+<div id="id_view_result">
+</div>
+<span onclick="setDisplay id_view_debug">-</span>
+<br/>
+<div id="id_view_debug" style="display:none;">
+	<textarea name="f_txa_view_debug" rows="3" cols="80"></textarea>
+</div>
+</body>
+</html>

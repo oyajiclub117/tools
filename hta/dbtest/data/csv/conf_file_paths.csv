@@ -1,0 +1,5 @@
+id,title,db_type,schema_id,path,file,user,passwd
+1,"csv-local","csv",1,"data\","","",""
+2,"csv-share","csv",2,"C:\Users\winridge\Documents\mydata\csv\","","",""
+3,"excel-sample","excel",1,"C:\Users\winridge\Documents\mydata\excel\","test-excel.xlsx","",""
+4,"udl-local","udl",1,"conf\","csv.udl","",""

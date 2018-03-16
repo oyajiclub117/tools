@@ -1,0 +1,192 @@
+id,title,sql_command,db_type,schema_id
+28,"汎用コードマスタ定義(明細)","select top 10 * from (
+select [Ｎｏ] as [id], [操作] as [ope],[チーム分類] as [LO],[f5] as [勧],[f6] as [商],[f7] as [請],[f8] as [変],[f9] as [サ],[f10] as [共],[1] as [主キー],[2] as [主キー名],[3] as [主キー説明],[4] as [サブキーフラグ],[5] as [サブキー１バイト数],[6] as [サブキー２バイト数],[7] as [ソート番号],[8] as [コード最小バイト数１],[9] as [コード最大バイト数１],[10] as [コード説明１],[11] as [コード最小バイト数２],[12] as [コード最大バイト数２],[13] as [コード説明２],[14] as [コード最小バイト数３],[15] as [コード最大バイト数３],[16] as [コード説明３],[17] as [コード最小バイト数４],[18] as [コード最大バイト数４],[19] as [コード説明４],[20] as [コード最小バイト数５],[21] as [コード最大バイト数５],[22] as [コード説明５],[23] as [コード最小バイト数６],[24] as [コード最大バイト数６],[25] as [コード説明６],[26] as [コード最小バイト数７],[27] as [コード最大バイト数７],[28] as [コード説明７],[29] as [コード最小バイト数８],[30] as [コード最大バイト数８],[31] as [コード説明８],[32] as [コード最小バイト数９],[33] as [コード最大バイト数９],[34] as [コード説明９],[35] as [コード最小バイト数１０],[36] as [コード最大バイト数１０],[37] as [コード説明１０],[38] as [コード最小バイト数１１],[39] as [コード最大バイト数１１],[40] as [コード説明１１],[41] as [コード最小バイト数１２],[42] as [コード最大バイト数１２],[43] as [コード説明１２],[44] as [コード最小バイト数１３],[45] as [コード最大バイト数１３],[46] as [コード説明１３],[47] as [コード最小バイト数１４],[48] as [コード最大バイト数１４],[49] as [コード説明１４],[50] as [コード最小バイト数１５],[51] as [コード最大バイト数１５],[52] as [コード説明１５],[53] as [コード最小バイト数１６],[54] as [コード最大バイト数１６],[55] as [コード説明１６],[56] as [コード最小バイト数１７],[57] as [コード最大バイト数１７],[58] as [コード説明１７],[59] as [コード最小バイト数１８],[60] as [コード最大バイト数１８],[61] as [コード説明１８],[62] as [コード最小バイト数１９],[63] as [コード最大バイト数１９],[64] as [コード説明１９],[65] as [コード最小バイト数２０],[66] as [コード最大バイト数２０],[67] as [コード説明２０],[68] as [メンテナンス可能フラグ],[69] as [明細追加可能フラグ],[70] as [バージョンNo],[71] as [作成者],[72] as [作成日],[73] as [更新者],[74] as [更新日] from [%1$] where isnumeric([Ｎｏ])) where [主キー名] like '%%3%';",1
+29,"汎用コードマスタ定義(明細)","select top 10 * from (
+select [Ｎｏ] as [id], [操作] as [ope],[チーム分類] as [LO],[f5] as [勧],[f6] as [商],[f7] as [請],[f8] as [変],[f9] as [サ],[f10] as [共],[1] as [主キー],[2] as [サブキー１],[3] as [サブキー２],[4] as [ソート番号],[5] as [期間開始日],[6] as [期間終了日],[7] as [コードValue１],[8] as [コードValue２],[9] as [コードValue３],[10] as [コードValue４],[11] as [コードValue５],[12] as [コードValue６],[13] as [コードValue７],[14] as [コードValue８],[15] as [コードValue９],[16] as [コードValue１０],[17] as [コードValue１１],[18] as [コードValue１２],[19] as [コードValue１３],[20] as [コードValue１４],[21] as [コードValue１５],[22] as [コードValue１６],[23] as [コードValue１７],[24] as [コードValue１８],[25] as [コードValue１９],[26] as [コードValue２０],[27] as [削除可能フラグ],[28] as [作成者],[29] as [作成日],[30] as [更新者],[31] as [更新日] from [%1$] where isnumeric([Ｎｏ])) where [主キー] like '%%3%';",1
+30,"汎用コードマスタ定義(明細)","select top 10 * from (
+select [Ｎｏ] as [id], [操作] as [ope],[チーム分類] as [LO],[f4] as [勧],[f5] as [商],[f6] as [請],[f7] as [変],[f8] as [サ],[f9] as [共],[1] as [主キー],[2] as [主キー名],[3] as [主キー説明],[4] as [サブキーフラグ],[5] as [サブキー１バイト数],[6] as [サブキー２バイト数],[7] as [ソート番号],[8] as [コード最小バイト数１],[9] as [コード最大バイト数１],[10] as [コード説明１],[11] as [コード最小バイト数２],[12] as [コード最大バイト数２],[13] as [コード説明２],[14] as [コード最小バイト数３],[15] as [コード最大バイト数３],[16] as [コード説明３],[17] as [コード最小バイト数４],[18] as [コード最大バイト数４],[19] as [コード説明４],[20] as [コード最小バイト数５],[21] as [コード最大バイト数５],[22] as [コード説明５],[23] as [コード最小バイト数６],[24] as [コード最大バイト数６],[25] as [コード説明６],[26] as [コード最小バイト数７],[27] as [コード最大バイト数７],[28] as [コード説明７],[29] as [コード最小バイト数８],[30] as [コード最大バイト数８],[31] as [コード説明８],[32] as [コード最小バイト数９],[33] as [コード最大バイト数９],[34] as [コード説明９],[35] as [コード最小バイト数１０],[36] as [コード最大バイト数１０],[37] as [コード説明１０],[38] as [コード最小バイト数１１],[39] as [コード最大バイト数１１],[40] as [コード説明１１],[41] as [コード最小バイト数１２],[42] as [コード最大バイト数１２],[43] as [コード説明１２],[44] as [コード最小バイト数１３],[45] as [コード最大バイト数１３],[46] as [コード説明１３],[47] as [コード最小バイト数１４],[48] as [コード最大バイト数１４],[49] as [コード説明１４],[50] as [コード最小バイト数１５],[51] as [コード最大バイト数１５],[52] as [コード説明１５],[53] as [コード最小バイト数１６],[54] as [コード最大バイト数１６],[55] as [コード説明１６],[56] as [コード最小バイト数１７],[57] as [コード最大バイト数１７],[58] as [コード説明１７],[59] as [コード最小バイト数１８],[60] as [コード最大バイト数１８],[61] as [コード説明１８],[62] as [コード最小バイト数１９],[63] as [コード最大バイト数１９],[64] as [コード説明１９],[65] as [コード最小バイト数２０],[66] as [コード最大バイト数２０],[67] as [コード説明２０],[68] as [メンテナンス可能フラグ],[69] as [明細追加可能フラグ],[70] as [バージョンNo],[71] as [作成者],[72] as [作成日],[73] as [更新者],[74] as [更新日] from [%1$] where isnumeric([Ｎｏ])) where [主キー名] like '%%3%';",1
+1,"table cols all","select top 1 * from %1;"
+2,"フレキシビリティ検討","select top 10 f1 as id,f2 as [対象（○）],f3 as 事業,f4 as [業務（Lv1)],f5 as 改修年度,f6 as 年度No,f7 as 依頼書No,f8 as [機能(キーワードベース）],f9 as 件名,f10 as 依頼種別,f11 as 依頼元,f12 as 依頼内容,f13 as 改修対象システム,f14 as 案件概要,f15 as 分類１,[基本機能の欠落、業務効率がもとめられる、１回のみの対応] as 分類２,f17 as フレキシビリティ改修の目的詳細,f18 as フレキシビリティ改修対象,f19 as フレキシビリティアプローチ概要,f20 as フレキシビリティアプローチ詳細,f21 as [（バグ対応、その他）],f22 as フレキシビリティ検討,f23 as フレキシビリティ以外での対応,f24 as 対応しない,f25 as 備考,f26 as [Ｉ／Ｆ・データ出力関連],f27 as 帳票,f28 as 関連帳票Ｎｏ from [%1$] where isnumeric(f1) and f15 = 'フレキシビリティ' %2 order by cint(f1) desc;"
+3,"file path excel","select path,file from file_paths.csv where id = %1;"
+4,"sql filter","select expression from sql_filters.csv where id = %1;"
+5,"list domain_names","select top 10 [ドメイン定義書] as [ID],f2 as [コード／非コード],f5 as [分類1],[機能グループID／名] as [分類2_A],f9 as [分類2_D],f10 as [分類2_B],f11 as [分類2_C],f12 as [分類2_E],f13 as [ドメイン名],f19 as [物理ドメイン名],f24 as [論理データ型],f27 as [桁数文字],f30 as [物理データ型],f33 as [データ長],f36 as [説明],[更新者] as [記述形式],f49 as [最小値],f52 as [最大値],f55 as [デフォルト値] from [%1$] where %2;"
+6,"list domain names","select top 10 [ドメイン定義書] as [ID],f3 as [コード／非コード],f5 as [分類1],f8 as [分類2_A],[機能グループID／名] as [分類2_D],f10 as [分類2_B],f11 as [分類2_C],f12 as [分類2_E],f13 as [ドメイン名],f19 as [物理ドメイン名],f24 as [論理データ型],f30 as [物理データ型],[作成者] as [説明],[更新者] as [記述形式],f56 as [最小値],f59 as [最大値],f62 as [デフォルト値] from [ドメイン定義書$] where isNumeric([ドメイン定義書]);"
+7,"list messages","select top 100 [メッセージ設計書] as [id],f3 as [MSG_ID],f14 as [発生元],f18 as [出力先],f21 as [エラーレベル],f25 as [メッセージ文字列] from [オンラインメッセージ定義書$] where isNumeric([メッセージ設計書]);"
+8,"list messages","select top 100 [メッセージ設計書] as [id],f3 as [MSG_ID],f14 as [発生元],f18 as [出力先],f21 as [エラーレベル],f25 as [メッセージ文字列] from [バッチメッセージ定義書$] where  isNumeric([メッセージ設計書]);"
+9,"list domain names","select top 10 [ドメイン定義書] as [ID],f2 as [コード／非コード],f5 as [分類1],f8 as [分類2_A],[機能グループID／名] as [分類2_D],f10 as [分類2_B],f11 as [分類2_C],f12 as [分類2_E],f13 as [ドメイン名],f19 as [物理ドメイン名],f24 as [論理データ型],f27 as [桁数文字],f30 as [物理データ型],f33 as [データ長],[作成者] as [説明],[更新者] as [記述形式],f56 as [最小値],f59 as [最大値],f62 as [デフォルト値] from ['ドメイン定義書 $'] where isNumeric([ドメイン定義書]);"
+10,"list business","select top 10 [概要設計_業務一覧] as [項番],f3 as [業務区分ID],f8 as [業務区分],f15 as [機能グループID],f21 as [機能グループ名],f28 as [業務大分類ID],f33 as [業務大分類],[作成者] as [業務名],[更新者] as [概要],[更新日] as [業務ID]
+ from [%1$] where isnumeric([概要設計_業務一覧]) and f8 like '%%3%';"
+11,"list rfc","select top 100 [■変更要件一覧] as id,f2 as 業務区分,f3 as 現行システム,f4 as 新システム,f5 as 理由,f6 as 取込み箇所,f7 as 備考,f9 as [新基幹システムの機能の上から] from [%1$] where %2 and f2 like '%%3%';"
+12,"func lists","select top 10 f1 as 処理分類,機能一覧 as 項番,f10 as 業務ID,f15 as 業務名,f21 as 機能ID,f26 as 機能名,f33 as オンライン,作成者 as バッチ,f41 as 実行可能時間帯,f47 as 入力,f50 as 概要,f64 as 出力,f67 as 備考 from [機能一覧$] where isnumeric([機能一覧]);",1
+13,"レビュー記録表示","select top 10 f1 as [№],[レビュー者記入欄] as [ドキュメント名],f4 as [指摘日],f5 as [指摘者],f6 as [指摘事項],[担　当　者　記　入　欄] as [回答者],f8 as [回答内容],f9 as [回答日],[レビュー者記入欄1] as [ステータス],f11 as [承認者],f12 as [承認日],f13 as [補足],f15 as [wk] from [%1$] where %2 and [レビュー者記入欄] like '%%3%';",1
+14,"spec_report_lists","select top 100 [配本企画の材発帳票について] as report_name,f2 as description, f3 as report_code, f4 as num_of_reports from ['(参考)年間配本_材発帳票$'] where  not isnull([配本企画の材発帳票について]);",1
+15,"現行全カラム一覧","select top 10 [エンティティ一覧] as [№],f2 as [論理テーブル名],[機能グループID／名] as [物理テーブル名],f20 as [テーブル種別],f24 as [説名],f44 as [テーブル分類],f50 as [主要],f51 as [SVN格納場所],f52 as [テーブル／ファイル] from [エンティティ一覧$] where isnumeric([エンティティ一覧]);",1
+16,"基幹メーリングリスト","select top 100 [番号],[名前],[メールアドレス],[マネジメント用_ucan_mgmt@pj#winridge#co#jp],[リーダ・サブリーダ連携_ucan_team0@pj#winridge#co#jp],[プロジェクト全員_ucan_team1@pj#winridge#co#jp],[F7] as 備考 from [%1$];",1
+17,"機能一覧","select top 10 * from (select [f1] as [項番],[f3] as [業務ID],[f8] as [業務名],[f14] as [機能ID],[f19] as [機能名],[f26] as [オンライン],[f27] as [バッチ],[f28] as [実行可能時間帯],[f29] as [入力],[f32] as [概要],[f35] as [出力] from [機能一覧$] where isnumeric([f1])) where 機能名 like '%%';"
+18,"バッチ一覧","select top 10 * from (select  [バッチ一覧] as [項番],f3 as [業務ID],f8 as [業務名],f15 as [機能ID],f20 as [機能名],f27 as [バッチ処理ID],f32 as [バッチ処理名],f44 as [概要],f63 as [実装言語],f67 as [方式],f71 as [外部IF],f74 as [備考] from [バッチ一覧$] where isnumeric([バッチ一覧])) where [業務名] like '%%3%';"
+19,"project todos","select top 10 a.*,b.completed from [proj_todos#csv] a left join proj_todo_statuses.csv b on a.id = b.id where b.completed is null;"
+20,"データＮＯ","select  [データNo] ,[データ名称], [備考] from [%1$] where [データNo] like '%%';"
+21,"ドメイン定義","select top 10 * from (
+select f1 as [ID],f2 as [コード／非コード],f5 as [分類1],f8 as [分類2],f15 as [ドメイン名],f21 as [物理ドメイン名],f26 as [論理データ型],f32 as [物理データ型],f38 as [説明],f48 as [記述形式],f58 as [最小値],f61 as [最大値],f64 as [デフォルト値],f70 as [修正内容] from [ドメイン定義書$] where isnumeric(f1)
+) where [ドメイン名] like '%%3%';"
+22,"アウトプット","select top 10 * from (select f1 as [認識確認],[624] as [№],f3 as [区分],f5 as [出力物],f7 as [現在の出力形式],f8 as [次期の出力形式],[○] as [個人情報],[33] as [帳票],[175] as [ファイルCSV（有）],f12 as [ファイルCSV（無）],[18] as [帳票イメージ],[0] as [固定長],[2] as [画面参照],[3] as [画面印刷],[01] as [他連携],[15] as [他通知],[146] as [不要] from [%1$] where isnumeric([624])) where [出力物] like '%%3%';"
+23,"成果物進捗管理表","select top 10 * from (
+select [サブシステム]&'-'&[f2]&'-'&[f3]&'-'&[f4]&'-'&[f5]&'-'&[f6] as [id],f12 as [機能名],f13 as [バッチ処理ID],f14 as [バッチ処理名],f15 as [作予＿開始日],f16 as [作予_終了日],f17 as [作予_担当],f18 as [作実＿開始日],f19 as [作実＿終了日],f20 as [作実＿担当],f21 as [Ｔレ予＿開始日],f22 as [Ｔレ予＿終了日],f23 as [Ｔレ予＿担当],f24 as [Ｔレ実＿開始日],f25 as [Ｔレ実＿終了日],f26 as [Ｔレ実＿担当],f27 as [Ｐレ予定＿開始日],f28 as [Ｐレ予定＿終了日],f29 as [Ｐレ予定＿担当],f30 as [Ｐレ実＿依頼日],f31 as [Ｐレ実＿開始日],f32 as [Ｐレ実＿終了日],f33 as [Ｐレ実＿担当],f34 as [Ｐレ実＿完了日],f35 as [客予＿提出],f36 as [客実＿提出],f43 as [データ区分]
+ from [%1$] where isnumeric([サブシステム])) where [データ区分] is null and [機能名] like '%%3%' and isnull([Ｐレ実＿完了日]);"
+24,"インタフェース(データＮＯ連携)","select top 10 * from (
+select top 100 [データNo],[データ名],[連携システム],[配着信],[設計書受領有無],[仕様書],[レイアウト],[備考],[仕様取り纏めが必要],[機能ＩＤ],[機能ＩＤ（ＥＴＬ）※項目切出し] as [機能ＩＤ2] from [インターフェース一覧整理_（データNO連携）$] where not isnull([データNo])) where [連携システム] like '%%3%';"
+25,"インタフェース(データ連携)","select top 10 * from 
+(select [項番],[インターフェース先],[配着信],[当時確定結果],[インタフェースID/名称],[概要],[連携システム論理名],[ファイルID],[物理ファイル名],[設計書受領有無],[仕様書],[レイアウト],[ＷＭ確認],[JSOL回答],[備考],[仕様取り纏めが必要],[機能ＩＤ],[機能ＩＤ（ＥＴＬ）]  from [インターフェース一覧整理_（データ連携）$] where isnumeric([項番])) where [連携システム論理名] like '%%3%';"
+26,"インタフェース(帳票連携)","select top 10 * from (
+select [項番],[インタフェースID/名称],[概要],[連携システム論理名],[ファイルID],[物理ファイル名],[備考],[設計書受領有無],[備考1],[OUTPUT一覧No#],[ToBe方針],[確認事項],[システム企画部コメント_(20151007_システム企画部確認結果)] from [インターフェース一覧整理_（帳票連携）$] where isnumeric([項番])) where [連携システム論理名] like '%%3%';"
+27,"インタフェース(社外向け連携)","select top 10 * from (
+select [f2] as [No],[f3] as [データＮｏ．],[f4] as [帳票名],[f5] as [部数],[f6] as [形式],[f7] as [配布先],[f8] as [基幹処理],[f9] as [設計書受領有無],[f10] as [仕様書],[f11] as [レイアウト],[f12] as [ＷＭ確認],[f13] as [JSOL回答],[f14] as [備考],[f15] as [仕様取り纏めが必要],[f16] as [機能ＩＤ],[f17] as [機能ＩＤ（ＥＴＬ）]
+ from [インターフェース一覧整理_（社外向け連携）$] where isnumeric([f2])) where [配布先] like '%%3%';",1
+31,"全カラム一覧","select top 10 [システム],[テーブル],[カラムNo],[論理名],[物理名],[データ型],[桁数],[NULL],[一意],[主キー],[外部キー参照先],[定義],[備考] from [全カラム一覧$] where [システム] like '%%' and [テーブル] like '%%3%';"
+32,"インプット一覧","select top 10 * from [インプット一覧（新基幹）$] where isnumeric([項番]);",1
+33,"インタフェース一覧[基幹共通]","select top 10 * from (
+select f1 as [項番],f3 as [インタフェースID],f9 as [インタフェース名称],f15 as [概要],f22 as [方式],f24 as [集配信区分],f26 as [利用タイミング],f30 as [利用頻度],f34 as [連携システム],f42 as [プロトコル],f49 as [転送データ],f46 as [既存／新規／変更],f49 as [データ区分],f53 as [最大サイズ],f57 as [保存期間],f61 as [保存場所],f65 as [ファイル形式],f69 as [ファイル単位],f73 as [最大処理件数],f77 as [文字セット],f81 as [エンコーティング],f85 as [デリミタ],f89 as [改行コード],f96 as [連動内容],f99 as [業務ID],f102 as [業務名],f105 as [機能ID],f108 as [機能名] from [インタフェース一覧$] where isnumeric(f1)
+) where [インタフェース名称] like '%%3%';"
+34,"HULFT情報一覧(集信)","select top 10 * from [集信$] where rcvfile like '%%3%';",1
+35,"HULFT情報一覧(配信)","select top 10 * from [配信$] where [ファイルID] like '%%3%';",1
+36,"HULFT情報管理","select top 10 * from [【ファイル一覧】$] where [ファイルID] like '%%3%';",1
+37,"お客様レビュー記録","select top 10 * from (select f1 as [id],[V4#0 レビュー者記入欄] as [業務ＭＡＰ名],f3 as [ドキュメント名],f4 as [指摘日],f5 as [指摘者],f6 as [指摘事項],[担　当　者　記　入　欄] as [回答者],f8 as [回答内容],f9 as [回答日],[レビュー者記入欄] as [ステータス],f11 as [承認者],f12 as [承認日],f13 as [補足],f15 as [wk] from [レビュー記録表$] where isnumeric(f1)) where [業務ＭＡＰ名] like '%%3%';",1
+38,"材発状態遷移","select top 100
+a.id as 状態,
+b.name as [状態名],
+p1 as [材発停止チェック(OK)] ,
+p2 as [材発停止チェック(NG)] ,
+p3 as [在庫引当(OK)] ,
+p4 as [在庫引当(NG)] ,
+p5 as [在庫引当(済)] ,
+p6 as [高額商品(保留)] ,
+p7 as [高額商品(解除)] ,
+p8 as [保留設定] ,
+p9 as [キャンセル] ,
+p10 as [保留解除] 
+from [bus_process_states#csv] a inner join bus_states.csv b on a.id = b.id;
+",1
+39,"内部課題管理","select top 10 * from (
+select  [基幹再構築プロジェクト_課題リスト] as [No],f2 as [優先度],f3 as [影響],f4 as [ステータス],f5 as [分類],f6 as [課題区分],f7 as [課題内容],f8 as [チーム],f9 as [起票者],f10 as [起票日],f11 as [担当者],f12 as [期限],f13 as [対策],f16 as [完了日],f17 as [備考] from [基幹再構築課題管理$] where isnumeric([基幹再構築プロジェクト_課題リスト])) where [チーム] like '%%3%';",1
+40,"全体ＭＡＰ-KJ001","select top 10 * from (
+select [機能一覧] as [項番],[f4] as [業務ID],[f9] as [業務名],[f16] as [機能ID],[f21] as [機能名],[f28] as [オンライン],[作成者] as [バッチ],[f36] as [実行可能時間帯],[f42] as [入力],[f45] as [概要],[f59] as [出力] from [%1$] where isnumeric([機能一覧])) where [業務名] like '%%3%';",1
+41,"基幹再構築課題一覧","select top 10 * from [%1$] where [課題事項] like '%%3%';",1
+42,"ＩＣＳ－ＯＣＳ共通化","select a.type_id,a.content as [ics_list],b.content as [ics_order],c.content as [dm_ocs],d.content as [dm_ocs_re] from
+(select 'リストＩＣＳ' as name,f2 as [type_id],f3 as [type_name],f9 as [content] from [勧誘修正版$] where [f2] is not null and [f3] is not null and [f9] is not null) a,
+(select 'オーダＩＣＳ' as name,f2 as [type_id],f3 as [type_name],f29 as [content] from [勧誘修正版$] where f2 is not null and f29 is not null) b,
+(select 'オーダＩＣＳ' as name,f2 as [type_id],f3 as [type_name],f48 as [content] from [勧誘修正版$] where f2 is not null and f48 is not null) c,
+(select top 100 '再ＯＣＳ' as name,f2 as [type_id],f3 as [type_name],f68 as [content] from [勧誘修正版$] where f2 is not null and f68 is not null) d
+where
+a.type_id = b.type_id and
+a.type_id = c.type_id and
+a.type_id = d.type_id
+;",1
+43,"共通モジュール一覧(検討)","select top 10 * from (
+select  f1 as [No],f2 as [LO],f3 as [変],f4 as [勧],f5 as [発],f6 as [請],f7 as [共通],f8 as [共通モジュールID],f9 as [共通モジュール名],f10 as [INPUT],[OUTPUT] as [戻り値],f12 as [返却データ],f13 as [処理概要],f14 as [呼び出し元_B],f15 as [呼び出し元_F],f16 as [設計担当者],f17 as [ステータス],f18 as [備考],f20 as [不要],f22 as [所管チーム] from [共通モジュール一覧$] where isnumeric([f1])
+) where [共通モジュール名] like '%%3%';",1
+44,"共通モジュール一覧","select top 10 * from (
+select f1 as [No],f2 as [LO],f3 as [変],f4 as [勧],f5 as [発],f6 as [請],f7 as [共通],f8 as [共通モジュールID],f9 as [共通モジュール名],f10 as [INPUT],[OUTPUT] as [戻り値],f12 as [返却データ],f13 as [処理概要],f14 as [呼び出し元],f15 as [設計担当者],f16 as [ステータス],f17 as [備考] from [共通モジュール一覧$] where isnumeric(f1)
+) where [共通モジュール名] like '%%3%';"
+45,"view list(msdb)","select top 10 * from [%1];"
+46,"view list(firebird)","select * from %1;"
+47,"お客様レビュー記録","select top 10 * from (select [f1] as [№],[V4#2 レビュー者記入欄] as [ドキュメント名],[f4] as [指摘日],[f5] as [指摘者],[f6] as [指摘事項],[担　当　者　記　入　欄] as [回答者],[f8] as [回答内容],[f9] as [回答日],[ステータス],[レビュー者記入欄] as [承認者],[f12] as [承認日],[LO] as [関連_ＬＯ],[請求] as [関連_請求],[勧誘] as [関連_勧誘],[材発] as [関連_材発],[変更_データ] as [関連_変更],[共通] as [関連_共通],[サブシス] as [関連_サブ] from ['V4#2 レビュー記録表$'] where isnumeric(f1) and [V4#2 レビュー者記入欄] is not null);",1
+48,"file path excel","select id,title from file_paths.csv where title like '%1'",1
+49,"schema_func","select top 10 b.title,a.sql_id,table,a.filter_id from [schema_funcs#csv] a inner join sql_commands.csv b on a.sql_id = b.id where a.schema_id = %1;"
+50,"データ別バッチ連携一覧","select top 10 * from (
+select  '6P12' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[生成データ（バッチ連携データ）　※日次更新トランレイアウト] as [顧客更新トラン],f9 as [受講履歴差分],f10 as [保留履歴（オーダー）],f11 as [DAILY統計処理ﾃﾞｰﾀ],f12 as [差分テーブル] from [生成データ一覧$] where [生成データ（バッチ連携データ）　※日次更新トランレイアウト]  = '●' or  [生成データ（バッチ連携データ）　※日次更新トランレイアウト] = '1'
+union
+select  '6P13' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f13] as [顧客更新トラン],f14 as [受講履歴差分],f15 as [保留履歴（オーダー）],f16 as [DAILY統計処理ﾃﾞｰﾀ],f17 as [差分テーブル] from [生成データ一覧$] where [f13]  = '●' or  [f13] = '1'
+union
+select  '6P13' as data_no,'統計（媒体統計、DM統計）' as used,f3 as data_type,f5 as [説明],[f18] as [顧客更新トラン],f19 as [受講履歴差分],f20 as [保留履歴（オーダー）],f21 as [DAILY統計処理ﾃﾞｰﾀ],f22 as [差分テーブル] from [生成データ一覧$] where [f18]  = '●' or  [f21] = '1'
+union
+select  '6PL3' as data_no,'統計（受注統計）' as used,f3 as data_type,f5 as [説明],[f23] as [顧客更新トラン],f24 as [受講履歴差分],f25 as [保留履歴（オーダー）],f26 as [DAILY統計処理ﾃﾞｰﾀ],f27 as [差分テーブル] from [生成データ一覧$] where [f23]  = '●' or  [f26] = '1'
+union
+select  '6PS4' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f28] as [顧客更新トラン],f29 as [受講履歴差分],f30 as [保留履歴（オーダー）],f31 as [DAILY統計処理ﾃﾞｰﾀ],f32 as [差分テーブル] from [生成データ一覧$] where [f28]  = '●' or  [f28] = '1'
+union
+select  '6PS5' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f33] as [顧客更新トラン],f34 as [受講履歴差分],f35 as [保留履歴（オーダー）],f36 as [DAILY統計処理ﾃﾞｰﾀ],f37 as [差分テーブル] from [生成データ一覧$] where [f33]  = '●' or  [f33] = '1'
+union
+select  '6P28' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f38] as [顧客更新トラン],f39 as [受講履歴差分],f40 as [保留履歴（オーダー）],f41 as [DAILY統計処理ﾃﾞｰﾀ],f42 as [差分テーブル] from [生成データ一覧$] where [f38]  = '●' or  [f38] = '1'
+union
+select  '6P95' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f49] as [顧客更新トラン],f50 as [受講履歴差分],f51 as [保留履歴（オーダー）],f52 as [DAILY統計処理ﾃﾞｰﾀ],f53 as [差分テーブル] from [生成データ一覧$] where [f49]  = '●' or  [f49] = '1'
+union
+select  '6P22' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f55] as [顧客更新トラン],f56 as [受講履歴差分],f57 as [保留履歴（オーダー）],f58 as [DAILY統計処理ﾃﾞｰﾀ],f59 as [差分テーブル] from [生成データ一覧$] where [f55]  = '●' or  [f55] = '1'
+union
+select  '6P9B' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f60] as [顧客更新トラン],f61 as [受講履歴差分],f62 as [保留履歴（オーダー）],f63 as [DAILY統計処理ﾃﾞｰﾀ],f64 as [差分テーブル] from [生成データ一覧$] where [f60]  = '●' or  [f60] = '1'
+union
+select  '6P97' as data_no,'顧客変更' as used,f3 as data_type,f5 as [説明],[f65] as [顧客更新トラン],f66 as [受講履歴差分],f67 as [保留履歴（オーダー）],f68 as [DAILY統計処理ﾃﾞｰﾀ],f69 as [差分テーブル] from [生成データ一覧$] where [f65]  = '●' or  [f65] = '1'
+) order by 1;"
+51,"データＮＯ(入力)","select top 100 f1 as [id],[ToBe資料] as [data_no],f3 as [分類],f4 as [名称],f5 as [存続／廃止],[主な取扱いチーム] as [リ],f20 as [勧],f21 as [商],f22 as [請],f23 as [変],f24 as [サ],f25 as [共] from [一覧$] where isnumeric(f1);",""
+52,"ココチモ機能一覧","select top 10 * from (
+select f1 as [項番],f2 as [分類],f3 as [機能グループ],f4 as [機能名],f5 as [機能概要],f6 as [入力],f7 as [出力],f8 as [備考] from [ココチモ関連機能一覧$] where isnumeric(f1));",1
+53,"ＩＣＳチェック","select top 10 f2 as [ＩＣＳ該当],f3 as [ＩＣＳ指示待ち],f4 as [ＩＣＳ対象外],f8 as [新ステータスマスタ],f9 as [新講座マスタ],f10 as [取引履歴],f11 as [ブラックマスタ],f12 as [入力トラン] from ['ICS機能記述書_変動ｵｰﾀﾞｰ  $'] where f5 like '%＊７%';",1
+54,"ココチモ日次更新トラン仕様","select top 10 * from (
+select  f1 as [NO],f2 as [分類],f3 as [項目],f4 as [TYPE],f5 as [LEN],f7 as [ｾｯﾄ仕様],f9 as [①ｵｰﾀﾞｰ直入],f10 as [②ﾗﾍﾞﾙ有],f11 as [③統計（媒体統計、DM統計）],f12 as [④統計（受注統計）],f13 as [⑤進物先名簿],f14 as [⑥進物先名簿],f15 as [⑦返品],f16 as [⑧返品（請求情報）],f17 as [⑨入金],f18 as [⑩未材取消],f19 as [⑪請求日次（調整入金など）],f20 as [⑫請求] from [日次更新トラン$]
+) where [項目] = '項目' or [項目] like '%%3%';"
+55,"新顧客ＤＢ連携差分","select top 100 'ＤＭ中止' as [分類],* from [test1#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union 
+select top 100 'ＤＭ履歴' as [分類],* from [test2#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union
+select top 100 'イベントのみ' as [分類],* from [test3#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union
+select top 100 'リスト履歴' as [分類],* from [test4#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union 
+select top 100 '顧客基本' as [分類],* from [test5#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union
+select top 100 '顧客統合' as [分類],* from [test6#csv] a left join test0.csv b on a.name = b.name where b.name is  null
+union
+select top 100 '受講履歴' as [分類],* from [test7#csv] a left join test0.csv b on a.name = b.name where b.name is  null;"
+56,"入力データＮＯ","select top 10 * from (
+select f1 as [番号],f2 as [データNO],f3 as [分類],f4 as [名称],f5 as [存続／廃止],f6 as [パンチ],f7 as [簡易入力],f8 as [CSV取込基幹刈取],f9 as [リスト・オーダー転送],f10 as [受注センター],f11 as [WebAPI],f12 as [Web非API],f13 as [他ｼｽﾃﾑ連携],f14 as [新基幹画面指示],f15 as [マスタ管理],f16 as [備考],f19 as [ＬＯ共通],f20 as [勧誘ＤＭ],f21 as [商品材発],f22 as [請求入金],f23 as [変更ﾃﾞｰﾀ],f24 as [ｻﾌﾞｼｽﾃﾑ],f25 as [基幹共通] from [一覧$] where isnumeric(f1)
+) where [データNO] like '6P8_';"
+57,"受付データ制御関連","select top 10 * from (
+select  f3 as [チェック項目1],f4 as [チェック項目2],f8 as [6P12],f9 as [6P13],f10 as [6P1F],f11 as [6P14],f12 as [6P15],f13 as [6P16],f14 as [6P17],f15 as [6P18],f16 as [6P19],f17 as [6P1K],f18 as [6P1V],f19 as [6P1W],f20 as [6P82],f21 as [6P8B],f22 as [6P8E],f24 as [パートワーク],f25 as [【参考1】],f26 as [【参考2】],f29 as [【A】],f30 as [【B】],f31 as [【D】],f32 as [【DD】],f33 as [【F】],f34 as [【J】],f35 as [【R】],f36 as [【S】],f37 as [【U】],f38 as [【V】],f39 as [【X】],f40 as [【XA】],f41 as [【XB】],f42 as [【XX】【X_X】],f43 as [【P】],f44 as [【Y】],f45 as [【W】],f46 as [【Q】],f47 as [【9】] from [【補足】受付制御スキップ（オーダー）$] where f3 is not null or f4 is not null
+) where [6P82] is not null;"
+58,"qa ","select top 10 * from (
+select f1 as [No],f2 as [ご質問],f3 as [ご回答] from [ご質問$] where isnumeric(f1)
+);",1
+59,"ココチモ機能一覧","select top 10 * from (
+select f1 as [項番],f2 as [分類],f3 as [機能グループ],f4 as [機能名],f5 as [機能概要],f6 as [入力],f7 as [出力],f8 as [備考] from [ココチモ関連機能一覧$] where isnumeric(f1)
+) where [機能名] like '%%';",1
+60,"機能一覧","select top 10 * from (
+select f1 as [区分],f2 as [項番],f4 as [処理分類],f9 as [業務ID],f14 as [業務名],f21 as [機能ID],f26 as [機能名],f33 as [オンライン],f37 as [バッチ],f41 as [実行可能時間帯],f47 as [入力],f50 as [概要],f64 as [出力] from [機能一覧$] where isnumeric(f2)
+) where [機能名] like '%%3%';",1
+61,"拠り所定義","select top 10 * from (
+select f1 as [No],f2 as [定義項目],f3 as [定義内容],f5 as [定義説明],f6 as [備考],f7 as [id] from [サブシステム$] where isnumeric(f7)
+) where [定義項目] like 'ココチモ';","excel","1"
+62,"バッチ書記記述書","select top 1000 file_name,mid(file_name,13,4) as bus_id from (
+select  file_name,path from [file_lists_all#csv] where path like '%phase_201411\110_お客様レビュー成果物%4.3%' and file_name like 'バッチ処理記述%'
+) where file_name like '%%';",,"1"
+63,"バッチ処理記述書","select top 1000 file_name,mid(file_name,13,4) as bus_id from (
+select  file_name,path from [file_lists_all#csv] where path like '%phase_201411\110_お客様レビュー成果物%4.3%' and file_name like 'バッチ処理記述%'
+) where file_name like '%%';","excel",1
+64,"機能一覧","select top 10 * from (
+select f1 as [項番],f3 as [業務ID],f8 as [業務名],f14 as [機能ID],f19 as [機能名],f26 as [オンライン],f27 as [バッチ],f28 as [実行可能時間帯],f29 as [入力],f32 as [概要],f35 as [出力] from [機能一覧$] where isnumeric(f1)
+) where [機能名] like '%%3%';",1
+65,"共通部品一覧","select top 10 * from (
+select  f1 as [項番],f3 as [部品分類],f9 as [部品ID],f15 as [部品名],f26 as [入力パラメータ],f36 as [概要],f61 as [出力パラメータ(制御)],f71 as [出力パラメータ(データ)],f81 as [実装言語],f85 as [備考],f98 as [LO],f99 as [勧誘],f100 as [材発],f101 as [請求],f102 as [変更],f103 as [サブ],f104 as [共通],f106 as [所管チーム],f108 as [LO_],f109 as [勧誘_],f110 as [材発_],f111 as [請求_],f112 as [変更_],f113 as [サブ_],f114 as [共通_] from [共通部品一覧$] where isnumeric(f1) 
+) where [部品ID] like '%%3%';",1
+66,"エンティティ一覧(基幹参照)","select top 100 * from (
+select f1 as [№],f4 as [論理テーブル名],f20 as [参照定義書ファイル名] from [エンティティ一覧$] where isnumeric(f1)
+) where [論理テーブル名] like '%%3%';",1
+67,"レビュー記録(外部設計)-V5.0","select top 10 * from (
+select f1 as [№],f2 as [ドキュメント名],f4 as [指摘日],f5 as [最終更新日],f6 as [指摘者],f7 as [指摘事項],f8 as [回答者],f9 as [回答内容],f10 as [回答日],f11 as [対応期限日],f13 as [承認者],f14 as [承認日] from [V5.0 レビュー記録表$] where isnumeric(f1)
+) where [ドキュメント名] like '%%3%';",1,"5"
+68,"Excel-diff","select top 100 * from [t$] a left join [m$] b on a.f1 = b.f1 where b.f1 is null
+union all
+select top 10 * from [t$] a right join [m$] b on a.f1 = b.f1 where a.f1 is null;",1,5
+69,"ジョブネット","select top 100 * from (
+select f1 as [サーバー],f2 as [スタート時刻],f3 as [ネット名称],f4 as [ジョブネットID],f5 as [ジョブID],f6 as [ジョブ番号],f7 as [リラン不可],f8 as [ジョブ名称],f9 as [先行ジョブ番号1],f10 as [先行ジョブ番号2],f11 as [先行ジョブ番号3],f12 as [先行ジョブ番号4],f13 as [先行ジョブ番号5],f14 as [先行ジョブ番号6],f15 as [実行種別],f16 as [実行条件],f17 as [修正履歴] from [処理手順書$]
+) where [ジョブ名称] like '%%3%' order by 2;",1,5
+70,"汎用コードマスタ(明細)","select top 10 b.* from (
+select [Ｎｏ] as [id], [操作] as [ope],[チーム分類] as [LO],[f5] as [勧],[f6] as [商],[f7] as [請],[f8] as [変],[f9] as [サ],[f10] as [共],[1] as [主キー],[2] as [主キー名],[3] as [主キー説明],[4] as [サブキーフラグ],[5] as [サブキー１バイト数],[6] as [サブキー２バイト数],[7] as [ソート番号],[8] as [コード最小バイト数１],[9] as [コード最大バイト数１],[10] as [コード説明１],[11] as [コード最小バイト数２],[12] as [コード最大バイト数２],[13] as [コード説明２],[14] as [コード最小バイト数３],[15] as [コード最大バイト数３],[16] as [コード説明３],[17] as [コード最小バイト数４],[18] as [コード最大バイト数４],[19] as [コード説明４],[20] as [コード最小バイト数５],[21] as [コード最大バイト数５],[22] as [コード説明５],[23] as [コード最小バイト数６],[24] as [コード最大バイト数６],[25] as [コード説明６],[26] as [コード最小バイト数７],[27] as [コード最大バイト数７],[28] as [コード説明７],[29] as [コード最小バイト数８],[30] as [コード最大バイト数８],[31] as [コード説明８],[32] as [コード最小バイト数９],[33] as [コード最大バイト数９],[34] as [コード説明９],[35] as [コード最小バイト数１０],[36] as [コード最大バイト数１０],[37] as [コード説明１０],[38] as [コード最小バイト数１１],[39] as [コード最大バイト数１１],[40] as [コード説明１１],[41] as [コード最小バイト数１２],[42] as [コード最大バイト数１２],[43] as [コード説明１２],[44] as [コード最小バイト数１３],[45] as [コード最大バイト数１３],[46] as [コード説明１３],[47] as [コード最小バイト数１４],[48] as [コード最大バイト数１４],[49] as [コード説明１４],[50] as [コード最小バイト数１５],[51] as [コード最大バイト数１５],[52] as [コード説明１５],[53] as [コード最小バイト数１６],[54] as [コード最大バイト数１６],[55] as [コード説明１６],[56] as [コード最小バイト数１７],[57] as [コード最大バイト数１７],[58] as [コード説明１７],[59] as [コード最小バイト数１８],[60] as [コード最大バイト数１８],[61] as [コード説明１８],[62] as [コード最小バイト数１９],[63] as [コード最大バイト数１９],[64] as [コード説明１９],[65] as [コード最小バイト数２０],[66] as [コード最大バイト数２０],[67] as [コード説明２０],[68] as [メンテナンス可能フラグ],[69] as [明細追加可能フラグ],[70] as [バージョンNo],[71] as [作成者],[72] as [作成日],[73] as [更新者],[74] as [更新日] from [汎用コードマスタ（ヘッダ）$] where isnumeric([Ｎｏ])
+) a inner join
+(
+select [Ｎｏ] as [id], [操作] as [ope],[チーム分類] as [LO],[f5] as [勧],[f6] as [商],[f7] as [請],[f8] as [変],[f9] as [サ],[f10] as [共],[1] as [主キー],[2] as [サブキー１],[3] as [サブキー２],[4] as [ソート番号],[5] as [期間開始日],[6] as [期間終了日],[7] as [コードValue１],[8] as [コードValue２],[9] as [コードValue３],[10] as [コードValue４],[11] as [コードValue５],[12] as [コードValue６],[13] as [コードValue７],[14] as [コードValue８],[15] as [コードValue９],[16] as [コードValue１０],[17] as [コードValue１１],[18] as [コードValue１２],[19] as [コードValue１３],[20] as [コードValue１４],[21] as [コードValue１５],[22] as [コードValue１６],[23] as [コードValue１７],[24] as [コードValue１８],[25] as [コードValue１９],[26] as [コードValue２０],[27] as [削除可能フラグ],[28] as [作成者],[29] as [作成日],[30] as [更新者],[31] as [更新日] from [汎用コードマスタ（明細）$] where isnumeric([Ｎｏ])) b on a.[主キー] = b.[主キー]
+where a.[主キー名] like '%%3%';",1,5
+71,"勘定系ＤＢ","select top 10 * from (
+select f1 as [№],f2 as [属性名],f6 as [カラム名],f10 as [データ型],f12 as [桁数],f13 as [精度],f14 as [NULL],f15 as [一意],f16 as [主ｷｰ],f17 as [外部キー参照先],f22 as [ドメイン],f25 as [定義] from ['取引履歴(勘定系)$'] where isnumeric([f1])
+) where [属性名] like '%_20';",1,5
+72,"レビュー記録(外部設計)-V5.0(u-can)","select top 10 * from (
+select f1 as [№],f2 as [ドキュメント名],f3 as [指摘箇所],f4 as [指摘日],f5 as [最終更新日],f6 as [指摘者],f7 as [指摘事項],f8 as [回答者],f9 as [回答内容],f10 as [回答日],f11 as [対応期限日],f13 as [承認者],f14 as [承認日] from ['V5#0 レビュー記録表$'] where isnumeric([f1])
+) where [ドキュメント名] like '%%' and [№] <= '740' and len([№]) > 2 order by 1 desc;",1,5
+73,"schema-funcs","select file_path_id & ',' & sheet_name & ',' & filter_id as key_,func_name as value_ from [schema_funcs_excel#csv] where [file_path_id] like '%%1%';",1,5
